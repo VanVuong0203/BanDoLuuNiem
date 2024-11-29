@@ -1,0 +1,82 @@
+﻿@page
+@model QuaLuuNiem.Pages.ThongKeDoanhThus.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>Thống kê</h3>
+<hr />
+
+<form method="post">
+    <button type="submit" class="btn btn-primary">Thực hiện thống kê</button>
+</form>
+<canvas id="revenueChart" width="400" height="200"></canvas>
+@section Scripts {
+        <script>
+            var ctx = document.getElementById('revenueChart').getContext('2d');
+            var revenueChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: [
+        @foreach (var revenue in Model.ThongKeDoanhThu)
+        {
+            @: "@revenue.Date.ToShortDateString()",
+        }
+                        ],
+                    datasets: [{
+                        label: 'TotalRevenue', // Đổi label từ 'Revenue' thành 'Amount'
+                        data: [
+        @foreach (var revenue in Model.ThongKeDoanhThu)
+        {
+            @: @revenue.TotalRevenue,
+        }
+                            ],
+                        backgroundColor: 'rgba(54, 162, 235, 10)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ThongKeDoanhThu[0].Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThongKeDoanhThu[0].Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThongKeDoanhThu[0].TotalRevenue)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ThongKeDoanhThu)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalRevenue)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

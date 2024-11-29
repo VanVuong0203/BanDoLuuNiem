@@ -1,0 +1,66 @@
+﻿@page
+@model QuaLuuNiem.Pages.SanPhams.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card mt-5 shadow-lg border-0 card-login">
+                <div class="card-header text-center bg-dark text-white">
+                    <h2>Thay thông tin sản phẩm</h2>
+                </div>
+                <div class="card-body p-5" style="background-color: white">
+                    <form method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="SanPham.ID" />
+                        <div class="form-group">
+                            <label asp-for="SanPham.MaSP" class="control-label"></label>
+                            <input asp-for="SanPham.MaSP" class="form-control" />
+                            <span asp-validation-for="SanPham.MaSP" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="SanPham.TenSP" class="control-label"></label>
+                            <input asp-for="SanPham.TenSP" class="form-control" />
+                            <span asp-validation-for="SanPham.TenSP" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="SanPham.HinhAnh" class="control-label"></label>
+                            <input asp-for="SanPham.HinhAnh" class="form-control" />
+                            <span asp-validation-for="SanPham.HinhAnh" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="SanPham.SoLuong" class="control-label"></label>
+                            <input asp-for="SanPham.SoLuong" class="form-control" />
+                            <span asp-validation-for="SanPham.SoLuong" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="SanPham.Gia" class="control-label"></label>
+                            <input asp-for="SanPham.Gia" class="form-control" />
+                            <span asp-validation-for="SanPham.Gia" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="SanPham.Loai" class="control-label"></label>
+                            <input asp-for="SanPham.Loai" class="form-control" />
+                            <span asp-validation-for="SanPham.Loai" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="SanPham.MoTa" class="control-label"></label>
+                            <input asp-for="SanPham.MoTa" class="form-control" />
+                            <span asp-validation-for="SanPham.MoTa" class="text-danger"></span>
+                        </div>
+                        <div class="form-group" style="text-align: center; margin-top: 20px">
+                            <input type="submit" value="Lưu" class="btn btn-dark" />
+                        </div>
+                        <a asp-page="/Admin/QuanLySanPham" class="text-decoration-none text-dark text-center"> Quay lại</a>
+                    </form>
+                </div>
+                </>
+            </div>
+        </div>
+    </div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

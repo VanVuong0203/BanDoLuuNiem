@@ -1,0 +1,40 @@
+﻿@page
+@model QuaLuuNiem.Pages.Admin.QuanLyThongTinKhachHangModel
+@{
+    ViewData["Title"] = "Quản Lý Thông Tin Khách Hàng";
+}
+
+<h3 style="margin-top: 10px">Quản Lý Thông Tin Khách Hàng</h3>
+<hr />
+
+<table class="table" style="background-color: white; margin-top: 30px">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.ThongTinKhachHang[0].MaKH)</th>
+            <th>@Html.DisplayNameFor(model => model.ThongTinKhachHang[0].HoTen)</th>
+            <th>@Html.DisplayNameFor(model => model.ThongTinKhachHang[0].DiaChi)</th>
+            <th>@Html.DisplayNameFor(model => model.ThongTinKhachHang[0].SDT)</th>
+            <th>@Html.DisplayNameFor(model => model.ThongTinKhachHang[0].TenDangNhap)</th>
+            <th>@Html.DisplayNameFor(model => model.ThongTinKhachHang[0].MatKhau)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ThongTinKhachHang)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.MaKH)</td>
+                <td>@Html.DisplayFor(modelItem => item.HoTen)</td>
+                <td>@Html.DisplayFor(modelItem => item.DiaChi)</td>
+                <td>@Html.DisplayFor(modelItem => item.SDT)</td>
+                <td>@Html.DisplayFor(modelItem => item.TenDangNhap)</td>
+                <td>@Html.DisplayFor(modelItem => item.MatKhau)</td>
+                <td>
+                    <a asp-page="/Login/Edit" asp-route-id="@item.ID" class="btn btn-primary">Chỉnh sửa</a> |
+                    
+                    <a asp-page="./Delete" asp-route-id="@item.ID" class="btn btn-danger">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

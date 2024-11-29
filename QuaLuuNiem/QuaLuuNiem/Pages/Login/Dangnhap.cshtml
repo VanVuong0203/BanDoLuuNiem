@@ -1,0 +1,42 @@
+﻿@page
+@model QuaLuuNiem.Pages.Login.DangnhapModel
+
+@{
+    ViewData["Title"] = "Đăng Nhập";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card mt-5 shadow-lg border-0 card-login">
+                <div class="card-header text-center bg-dark text-white">
+                    <img src="~/hinhanh/logodangnhap.png" alt="Logo Đăng Nhập" class="custom-logo">
+                </div>
+                <div class="card-body p-5" style="background-color: white">
+                    @if (ViewData["ErrorMessage"] != null)
+                    {
+                        <div class="alert alert-danger">
+                            @ViewData["ErrorMessage"]
+                        </div>
+                    }
+
+                    <form method="post">
+                        <div class="mb-3">
+                            <b><label asp-for="Logins.TenDangNhap" class="form-label"></label></b>
+                            <input asp-for="Logins.TenDangNhap" class="form-control" placeholder="Tên đăng nhập" />
+                            <span asp-validation-for="Logins.TenDangNhap" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <b><label asp-for="Logins.MatKhau" class="form-label"></label></b>
+                            <input asp-for="Logins.MatKhau" type="password" class="form-control" placeholder="Mật khẩu" />
+                            <span asp-validation-for="Logins.MatKhau" class="text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn btn-dark w-100">Đăng Nhập</button>
+                    </form>
+                    <a asp-page="/Login/Dangky" class="text-decoration-none text-dark text-center">Chưa có tài khoản? Đăng ký ngay</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

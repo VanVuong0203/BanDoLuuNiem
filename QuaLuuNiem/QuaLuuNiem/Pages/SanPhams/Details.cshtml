@@ -1,0 +1,104 @@
+﻿@page
+@model QuaLuuNiem.Pages.SanPhams.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    <h4 style="margin-top: 10px">Chi tiết sản phẩm</h4>
+    <hr />
+    <div class="tong" style="display: flex">
+        <div class="hinhanh">
+            <img src="@Url.Content("~/hinhanh/" + @Model.SanPham.HinhAnh)" alt="@Model.SanPham.TenSP" style="width: 350px; height: 350px" />
+        </div>
+        <div class="thongtin" style="margin-left: 50px">
+            <table>
+                <tr style="height: 60px">
+                    <td colspan="3"><label style="font-size: 30px; color: gray">@Html.DisplayFor(model => model.SanPham.TenSP)</label></td>
+                </tr>
+                <tr style="height: 60px">
+                    <td colspan="2">
+                        <label style="font-size:16px; color: orangered; text-decoration: underline">đ</label>
+                        <label style="font-size:24px; color: orangered;">@Html.DisplayFor(model => model.SanPham.Gia)</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 200px">Chính Sách Trả Hàng</td>
+                    <td colspan="2">
+                        <img src="@Url.Content("~/hinhanh/iconhopqua.jpg")" style="width:15px" />
+                        <label>Trả hàng 15 ngày</label>
+                        <label style="margin-left: 20px">Đổi ý miễn phí</label>
+                        <img src="@Url.Content("~/hinhanh/iconchamhoi.jpg")" style="width:15px" />
+                    </td>
+                </tr>
+                <tr style="height: 60px">
+                    <td>Vận chuyển</td>
+                    <td style="width: 300px" colspan="2">
+                        <img src="@Url.Content("~/hinhanh/iconfreeship.jpg")" style="width: 30px" />
+                        Miễn phí vận chuyển
+                    </td>
+                </tr>
+                <tr style="height: 60px">
+                    <td>Số lượng</td>
+                    <td>
+                        <span style="margin-bottom: 10px">
+                            <input type="number" id="quantity_@Model.SanPham.MaSP" min="1" max="@Model.SanPham.SoLuong" value="1" style="width:50px; height:20px; margin-left:20px; padding-left: 13px" />
+                        </span>
+                    </td>
+                </tr>
+                <tr style="height: 60px; margin-top: 50px">
+                    <td colspan="2">
+                        <form id="add-to-cart-form" method="post" asp-page-handler="AddToCart" onsubmit="setQuantity('@Model.SanPham.MaSP')">
+                            <input type="hidden" name="productId" value="@Model.SanPham.ID" />
+                            <input type="hidden" name="MSP" value="@Model.SanPham.MaSP" />
+                            <input type="hidden" id="quantity-input" name="quantity" value="1" />
+                            <button type="submit" style="height:50px; border-radius: 3px; border: 1px solid orangered; background: navajowhite; width: 200px">
+                                <img src="@Url.Content("~/hinhanh/icongiohang.png")" style="width: 20px">
+                                Thêm vào giỏ hàng
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form id="buy-now-form" method="post" asp-page-handler="MuaHang">
+                            <input type="hidden" name="productId" value="@Model.SanPham.ID" />
+                            <input type="hidden" id="quantity-buy-now" name="quantity" value="1" />
+                            <button type="submit" style="height:50px; border-radius: 3px; border: 1px solid orangered; background: orangered; color: white; width: 200px; margin-right:250px">Mua ngay</button>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div>
+        <label style="font-size: 26px">Mô tả</label>
+
+        @{
+            string moTa = Model.SanPham.MoTa?.Replace("\n", "</br>");
+        }
+
+        <label style="height: auto">@Html.Raw(moTa)</label>
+    </div>
+</div>
+
+<script>
+    function setQuantity(maSP) {
+        var quantity = document.getElementById(`quantity_${maSP}`).value;
+        document.getElementById('quantity-input').value = quantity;
+    }
+
+    function total(maSP) {
+        var quantity = document.getElementById(`quantity_${maSP}`).value;
+        document.getElementById('quantity-input').value = quantity;
+    }
+
+    document.getElementById('buy-now-form').addEventListener('submit', function (event) {
+        var maSP = '@Model.SanPham.MaSP';
+        var quantity = document.getElementById(`quantity_${maSP}`).value;
+        document.getElementById('quantity-buy-now').value = quantity;
+    });
+</script>
+
+
+
+

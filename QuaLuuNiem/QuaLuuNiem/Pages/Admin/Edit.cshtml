@@ -1,0 +1,58 @@
+﻿@page
+@model QuaLuuNiem.Pages.Admin.EditModel
+@{
+    ViewData["Title"] = "Edit Thông Tin Khách Hàng";
+}
+
+<h1>Edit Thông Tin Khách Hàng</h1>
+
+<h4>ThongTinKhachHang</h4>
+<hr />
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card mt-5 shadow-lg border-0 card-login">
+                <div class="card-header text-center bg-dark text-white">
+                    <h2>Thêm sản phẩm mới</h2>
+                </div>
+                <div class="card-body p-5" style="background-color: white">
+                    <form method="post">
+                        <div class="form-group">
+                            <label asp-for="ThongTinKhachHang.MaKH" class="control-label"></label>
+                            <input asp-for="ThongTinKhachHang.MaKH" class="form-control" />
+                            <span asp-validation-for="ThongTinKhachHang.MaKH" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ThongTinKhachHang.HoTen" class="control-label"></label>
+                            <input asp-for="ThongTinKhachHang.HoTen" class="form-control" />
+                            <span asp-validation-for="ThongTinKhachHang.HoTen" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ThongTinKhachHang.DiaChi" class="control-label"></label>
+                            <input asp-for="ThongTinKhachHang.DiaChi" class="form-control" />
+                            <span asp-validation-for="ThongTinKhachHang.DiaChi" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ThongTinKhachHang.SDT" class="control-label"></label>
+                            <input asp-for="ThongTinKhachHang.SDT" class="form-control" />
+                            <span asp-validation-for="ThongTinKhachHang.SDT" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ThongTinKhachHang.TenDangNhap" class="control-label"></label>
+                            <input asp-for="ThongTinKhachHang.TenDangNhap" class="form-control" />
+                            <span asp-validation-for="ThongTinKhachHang.TenDangNhap" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ThongTinKhachHang.MatKhau" class="control-label"></label>
+                            <input asp-for="ThongTinKhachHang.MatKhau" class="form-control" />
+                            <span asp-validation-for="ThongTinKhachHang.MatKhau" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+                </>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,78 @@
+﻿@page
+@model QuaLuuNiem.Pages.SanPhams.IndexModel
+
+@{
+    ViewData["Title"] = "Danh Sách Sản Phẩm";
+}
+
+<body>
+<form method="get">
+    <div class="form-actions no-color">
+            <div style="display: flex; align-items: center; background-color: #FFDEAD; margin: 20px; width: 100%">
+            <p style="font-family: Algerian; font-size: 50px; color: red; align-items: center; margin-top: 20px; margin-left: 15px">Quà Lưu Niệm</p>
+            
+            <div class="thanhtimkiem" style="margin-left: 60px">
+                <input type="text" name="searchString" value="@Model.CurrentFilter" placeholder="Nhập từ khóa tìm kiếm" style="width: 400px; height: 40px; padding-right: 70px; padding-left: 10px; position:absolute" />
+                    <div class="dropdown" style="margin-left: 340px; position: relative; top:2px; height: 30px;">
+                        <button type="submit" style="background-color: orange; border:none; box-shadow: 2px 2px 5px orangered; width:50px; border-radius:5px;margin-top: 5px">
+                        <img src="@Url.Content("~/hinhanh/icontimkiem.png")" style="width: 20px" />
+                    </button>
+                </div>
+            </div>
+                <select asp-for="SanPhamLoai" asp-items="Model.LoaiList" class="btn btn-warning" style="width: 130px; margin-top:12px; margin-left:30px">
+                    <option value=""><b>Danh mục</b></option>
+                </select>
+            
+                
+        </div>
+    </div>
+</form>
+
+<div class="danhsach" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin: 10px">
+    @foreach (var item in Model.SanPhams)
+    {
+        <a class="item" asp-page="./Details" asp-route-id="@item.ID" style="border: 2px solid black; margin: 10px; display: flex; flex-direction: column; align-items: center; text-decoration: none; ;   background-color: white; box-shadow: 5px 5px 5px #808080">
+            <img src="@Url.Content("~/hinhanh/" + item.HinhAnh)" alt="@item.TenSP" style="max-width: 245px; height: auto; max-height: 245px" />
+            <label style="margin: 0px 10px; text-align: center; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; height: 3.3em">@item.TenSP</label>
+            <span style="margin-bottom: 10px; margin-left: -30px">
+                <label style="color: red; font-size: 10px; text-decoration: underline">đ</label>
+                <label style="color: red;">@item.Gia</label>
+            </span>
+        </a>
+    }
+</div>
+
+@{
+    var prevDisabled = !Model.SanPhams.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.SanPhams.HasNextPage ? "disabled" : "";
+}
+
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.SanPhams.PageIndex - 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   asp-route-sanPhamLoai="@Model.SanPhamLoai"
+   class="btn btn-primary @prevDisabled" style="margin-left:500px">
+    Trước
+</a>
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.SanPhams.PageIndex + 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   asp-route-sanPhamLoai="@Model.SanPhamLoai"
+   class="btn btn-primary @nextDisabled" >
+    Sau
+</a>
+</body>
+
+<style>
+    .item {
+        transition: border 0.3s ease, transform 0.3s;
+    }
+
+        .item:hover {
+            border: 1px solid red;
+            transform: translateX(0px) translateY(-5px);
+            cursor: pointer;
+        }
+</style>

@@ -1,0 +1,57 @@
+﻿@page
+@model QuaLuuNiem.Pages.Admin.DeleteModel
+@{
+    ViewData["Title"] = "Xóa Thông Tin Khách Hàng";
+}
+
+<h1>Xóa Thông Tin Khách Hàng</h1>
+
+<h3>Bạn có chắc muốn xóa thông tin khách hàng này?</h3>
+<div>
+    <h4>ThongTinKhachHang</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ThongTinKhachHang.MaKH)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ThongTinKhachHang.MaKH)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ThongTinKhachHang.HoTen)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ThongTinKhachHang.HoTen)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ThongTinKhachHang.DiaChi)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ThongTinKhachHang.DiaChi)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ThongTinKhachHang.SDT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ThongTinKhachHang.SDT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ThongTinKhachHang.TenDangNhap)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ThongTinKhachHang.TenDangNhap)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ThongTinKhachHang.MatKhau)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ThongTinKhachHang.MatKhau)
+        </dd>
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="ThongTinKhachHang.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./QuanLyThongTinKhachHang">Cancel</a>
+    </form>
+</div>

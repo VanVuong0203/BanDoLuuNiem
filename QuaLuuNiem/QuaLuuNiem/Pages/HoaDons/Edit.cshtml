@@ -1,0 +1,50 @@
+﻿@page
+@model QuaLuuNiem.Pages.HoaDons.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>HoaDon</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="HoaDon.ID" />
+            <div class="form-group">
+                <label asp-for="HoaDon.MaKH" class="control-label"></label>
+                <input asp-for="HoaDon.MaKH" class="form-control" />
+                <span asp-validation-for="HoaDon.MaKH" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoaDon.MaHD" class="control-label"></label>
+                <input asp-for="HoaDon.MaHD" class="form-control" />
+                <span asp-validation-for="HoaDon.MaHD" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoaDon.NgayBan" class="control-label"></label>
+                <input asp-for="HoaDon.NgayBan" class="form-control" />
+                <span asp-validation-for="HoaDon.NgayBan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoaDon.TongTien" class="control-label"></label>
+                <input asp-for="HoaDon.TongTien" class="form-control" />
+                <span asp-validation-for="HoaDon.TongTien" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

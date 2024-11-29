@@ -1,0 +1,53 @@
+﻿@page
+@model QuaLuuNiem.Pages.Admin.DetailsModel
+@{
+    ViewData["Title"] = "Chi Tiết Thông Tin Khách Hàng";
+}
+
+<h3 style="margin-top: 10px">Chi Tiết Thông Tin Khách Hàng</h3>
+<hr />
+
+<div style="background-color: white; text-align: center">
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ThongTinKhachHang.MaKH)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ThongTinKhachHang.MaKH)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ThongTinKhachHang.HoTen)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ThongTinKhachHang.HoTen)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ThongTinKhachHang.DiaChi)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ThongTinKhachHang.DiaChi)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ThongTinKhachHang.SDT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ThongTinKhachHang.SDT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ThongTinKhachHang.TenDangNhap)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ThongTinKhachHang.TenDangNhap)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ThongTinKhachHang.MatKhau)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ThongTinKhachHang.MatKhau)
+        </dd>
+    </dl>
+    <div style="margin-bottom:10px">
+        <a asp-page="/Admin/QuanLyThongTinKhachHang" class="btn btn-dark"> Quay lại</a>
+    </div>
+</div>
+

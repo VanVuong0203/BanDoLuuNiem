@@ -1,0 +1,84 @@
+﻿@page
+@model QuaLuuNiem.Pages.GioHangs.DetailsModel
+
+@{
+    ViewData["Title"] = "Chi tiết hóa đơn";
+}
+
+<div class="all" style="margin-top:80px">
+    <h4>HÓA ĐƠN BÁN HÀNG</h4>
+    <div class="thongtin">
+        <div class="khachhang">
+            <p>Khách Hàng: @Model.userName</p>
+            <p>Số Điện Thoại: @Model.userSDT</p>
+            <p>Địa Chỉ: @Model.userDC</p>
+        </div>
+        <div class="shop">
+            <p>Địa chỉ: 172 An Dương Vương - P.Nguyễn Văn Cừ - TP. Quy Nhơn - Bình Đình</p>
+            <p>Số Điện Thoại: 0984858394</p>
+            <p>Email: cuahangluuniem172@gmail.com</p>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Tên Sản Phẩm</th>
+                <th style="text-align: center">Số Lượng</th>
+                <th style="text-align: center">Giá</th>
+                <th style="text-align: center">Thành Tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.SelectedItems)
+            {
+                <tr>
+                    <td style="width: 350px">@item.TenSP</td>
+                    <td style="text-align: center">@item.SoLuong</td>
+                    <td style="text-align: center">@item.Gia</td>
+                    <td style="text-align: center">@(item.Gia * item.SoLuong)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+        @if (Model.SelectedItems.Any())
+        {
+            <p style="font-weight:600">Tổng cộng: @Model.TotalPrice.000đ</p>
+            <p style="float: right; font-weight:600">Ngày @DateTime.Now.Day Tháng @DateTime.Now.Month Năm @DateTime.Now.Year</p>
+            <p style="text-align: center; margin-top: 70px">Cảm ơn quý khách đã ủng hộ!</p>
+        }
+</div>
+<style>
+    .all {
+        background-color: white;
+        width: 70%;
+        margin-left: 200px;
+        border: 1px solid black;
+        padding: 20px 50px;
+    }
+
+        .all h4 {
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+            font-size: 40px;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+    .thongtin {
+        display: flex;
+    }
+
+    .khachhang {
+        width: 200px;
+    }
+
+    .shop {
+        margin-left: 200px;
+        width: 350px;
+        float: left;
+    }
+
+    table td {
+        border: 1px solid black;
+    }
+</style>

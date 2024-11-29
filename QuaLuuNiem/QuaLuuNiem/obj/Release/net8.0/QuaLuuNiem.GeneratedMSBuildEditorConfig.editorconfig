@@ -1,0 +1,167 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = QuaLuuNiem
+build_property.RootNamespace = QuaLuuNiem
+build_property.ProjectDir = C:\Users\huynh\Downloads\QuaLuuNiem\QuaLuuNiem\QuaLuuNiem\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\huynh\Downloads\QuaLuuNiem\QuaLuuNiem\QuaLuuNiem
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/Admin/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/Admin/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/Admin/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/Admin/QuanLySanPham.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUXVhbkx5U2FuUGhhbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/Admin/QuanLyThongTinKhachHang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUXVhbkx5VGhvbmdUaW5LaGFjaEhhbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/GioHangs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2lvSGFuZ3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/GioHangs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2lvSGFuZ3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/GioHangs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2lvSGFuZ3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/GioHangs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2lvSGFuZ3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/GioHangs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2lvSGFuZ3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/HoaDons/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9hRG9uc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/HoaDons/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9hRG9uc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/HoaDons/DSHoaDon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9hRG9uc1xEU0hvYURvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/HoaDons/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9hRG9uc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/HoaDons/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9hRG9uc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/Login/Dangky.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cRGFuZ2t5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/Login/Dangnhap.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cRGFuZ25oYXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/Login/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/Login/DoiMatKhau.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cRG9pTWF0S2hhdS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/Login/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/Login/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cTG9nb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/Login/QLUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cUUxVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/SanPhams/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FuUGhhbXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/SanPhams/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FuUGhhbXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/SanPhams/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FuUGhhbXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/SanPhams/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FuUGhhbXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/SanPhams/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FuUGhhbXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/ThongKeDoanhThus/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGhvbmdLZURvYW5oVGh1c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/huynh/Downloads/QuaLuuNiem/QuaLuuNiem/QuaLuuNiem/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-oi3lwjozu1

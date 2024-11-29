@@ -1,0 +1,104 @@
+﻿@page
+@model QuaLuuNiem.Pages.GioHangs.IndexModel
+
+@{
+    ViewData["Title"] = "Giỏ hàng";
+}
+<body>
+    <div style="border: none; background: #FFDEAD; margin-top: 10px; width: 100%; height: 60px  ">
+    <img src="@Url.Content("~/hinhanh/icongiohang.png")" style="width: 40px; margin-left: 20px; margin-top: 5px" /> Giỏ Hàng
+</div>
+<hr />
+<div style="overflow-y: auto; max-height: 350px;">
+<table class="table" >
+    <tbody>
+        @foreach (var item in Model.ThongTinGioHang)
+        {
+            <div class="tong" style="display: flex; gap: 20px; height: 220px; border-bottom: 1px solid grey; margin-top: 20px">
+                <div style="width: 50px">
+                    <input type="checkbox" class="product-checkbox" data-price="@item.Gia" data-id="@item.ID" style="width:20px; height: 20px" />
+                </div>
+                <div class="hinhanh">
+                    <img src="@Url.Content("~/hinhanh/" + item.HinhAnh)" alt="@item.TenSP" style="width: 200px; height: 200px" />
+                </div>
+                <div class="thongtin" style="margin-left: 50px">
+                    <label style="font-size: 20px; color: gray; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden">@item.TenSP</label>
+                    <div style="display: inline-block; margin-top: 40px">
+                        <img src="@Url.Content("~/hinhanh/iconhopqua.jpg")" style="width:15px" />
+                        <label>Trả hàng 15 ngày</label>
+                        <label style="margin-left: 20px">Đổi ý miễn phí</label>
+                        <img src="@Url.Content("~/hinhanh/iconchamhoi.jpg")" style="width:15px" />
+                    </div>
+
+                    <div style="margin-top: 30px; position: relative">
+                        <label style="font-size:16px; color: orangered; text-decoration: underline">đ</label>
+                        <label style="font-size:24px; width: 100px; color: orangered;">@item.Gia</label>
+                        <input type="number" class="quantity-input" data-id="@item.ID" value="@item.SoLuong" min="0" style="position:relative; width:80px; height:30px; margin-left:40px; margin-top: 40px; padding-left: 10px" />
+                       
+                        <form method="post" asp-page-handler="Delete" style="display: inline-block; margin-left: 10px">
+                            <input type="hidden" name="id" value="@item.ID" />
+                            <input type="submit" value="Xóa" class="btn btn-danger" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    </tbody>
+</table>
+</div>
+<form>
+    <div style="float: right; margin-bottom: 10px">
+        Tổng thanh toán: <label style="text-decoration: underline; font-size: 14px; color: orangered">đ</label>
+        <label id="total-price" style="color: orangered; width: 100px">0</label>
+
+    </div>
+</form>
+<button style="margin-left:910px; border: none; width: 130px; height: 50px; background: orange; color: white" type="submit" id="view-selected">Mua hàng</button>
+</body>
+
+
+@section Scripts {
+    <script>
+        document.getElementById('view-selected').addEventListener('click', function () {
+            const selectedIds = Array.from(document.querySelectorAll('.product-checkbox:checked'))
+                .map(checkbox => checkbox.getAttribute('data-id'))
+                .join(',');
+
+            if (selectedIds) {
+                window.location.href = `GioHangs/Details?selectedIds=${selectedIds}`;
+            } else {
+                alert('Không có sản phẩm nào được chọn.');
+            }
+        });
+
+        document.querySelectorAll('.product-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', updateTotalPrice);
+        });
+
+        document.querySelectorAll('.quantity-input').forEach(input => {
+            input.addEventListener('input', updateTotalPrice);
+        });
+
+        function updateTotalPrice() {
+            let totalPrice = 0;
+
+            document.querySelectorAll('.product-checkbox:checked').forEach(checkbox => {
+                const price = parseFloat(checkbox.getAttribute('data-price'));
+                const id = checkbox.getAttribute('data-id');
+                const quantityInput = document.querySelector(`.quantity-input[data-id='${id}']`);
+                const quantity = parseInt(quantityInput.value);
+
+                if (!isNaN(price) && !isNaN(quantity)) {
+                    totalPrice += price * quantity;
+                } else {
+                    console.error('Invalid price or quantity');
+                }
+            });
+
+            document.getElementById('total-price').innerText = totalPrice.toLocaleString();
+        }
+    </script>
+}
+
+<style>
+</style>

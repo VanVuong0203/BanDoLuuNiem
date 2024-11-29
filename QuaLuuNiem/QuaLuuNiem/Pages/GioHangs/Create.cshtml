@@ -1,0 +1,59 @@
+﻿@page
+@model QuaLuuNiem.Pages.GioHangs.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ThongTinGioHang</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ThongTinGioHang.MaKH" class="control-label"></label>
+                <input asp-for="ThongTinGioHang.MaKH" class="form-control" />
+                <span asp-validation-for="ThongTinGioHang.MaKH" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ThongTinGioHang.MaSP" class="control-label"></label>
+                <input asp-for="ThongTinGioHang.MaSP" class="form-control" />
+                <span asp-validation-for="ThongTinGioHang.MaSP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ThongTinGioHang.TenSP" class="control-label"></label>
+                <input asp-for="ThongTinGioHang.TenSP" class="form-control" />
+                <span asp-validation-for="ThongTinGioHang.TenSP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ThongTinGioHang.SoLuong" class="control-label"></label>
+                <input asp-for="ThongTinGioHang.SoLuong" class="form-control" />
+                <span asp-validation-for="ThongTinGioHang.SoLuong" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ThongTinGioHang.Gia" class="control-label"></label>
+                <input asp-for="ThongTinGioHang.Gia" class="form-control" />
+                <span asp-validation-for="ThongTinGioHang.Gia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ThongTinGioHang.HinhAnh" class="control-label"></label>
+                <input asp-for="ThongTinGioHang.HinhAnh" class="form-control" />
+                <span asp-validation-for="ThongTinGioHang.HinhAnh" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

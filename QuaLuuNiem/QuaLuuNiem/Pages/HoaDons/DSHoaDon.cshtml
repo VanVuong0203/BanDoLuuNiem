@@ -1,0 +1,85 @@
+﻿@page
+@model QuaLuuNiem.Pages.HoaDons.DSHoaDonModel
+
+@{
+    ViewData["Title"] = "Danh sách Hóa Đơn";
+}
+<body>
+<h1>Danh Sách Hóa Đơn</h1>
+
+@if (Model.HoaDon != null && Model.HoaDon.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Mã Hóa Đơn</th>
+                <th>Ngày Bán</th>
+                <th>Tổng Tiền</th>
+                <th>Chi tiết</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.HoaDon)
+            {
+                <tr>
+                    <td>@item.MaHD</td>
+                    <td>@item.NgayBan.ToString("dd/MM/yyyy")</td>
+                    <td>@item.TongTien.ToString("C")</td>
+                    <td>
+                            <a class="btn btn-primary" asp-page="./Details" asp-page-handler="Details" asp-route-id="@item.MaHD">Chi tiết</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Không có hóa đơn nào.</p>
+    }
+</body>
+
+<!--<style>
+    body{
+        background-color: cornflowerblue;
+    }
+
+    h1{
+        text-align: center;
+        margin-top:20px;
+    }
+
+    table{
+        width: 100px;
+        border: 1px solid black;
+        background-image: url("data:image/jpeg;base64,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");
+        background-repeat: no-repeat;
+        object-fit:cover;
+        background-size: cover;
+        background-position: center;
+    }
+
+    table tr,
+    table td{
+        text-align: center;
+        border: 1px solid black;
+        width:100px;
+    }
+
+    .buttonCT {
+        text-decoration: none;
+        background: cornflowerblue;
+        border: 1px solid #fff;
+        box-shadow: 2px 2px 5px blue;
+        border-radius: 5px;
+        padding: 0px 10px;
+        color: white;
+        transition: background ease 0.5s;
+    }
+
+    .buttonCT:hover{
+        background: #fff;
+        color: blue;
+    }
+</style>
+-->

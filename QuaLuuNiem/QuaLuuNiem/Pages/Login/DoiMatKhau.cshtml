@@ -1,0 +1,58 @@
+﻿@page
+@model QuaLuuNiem.Pages.Login.DoiMatKhauModel
+
+@{
+    ViewData["Title"] = "Đổi Mật Khẩu";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card mt-5 shadow-lg border-0 card-login">
+                <div class="card-header text-center bg-dark text-white">
+                    <h2>Đổi Mật Khẩu</h2>
+                </div>
+                <div class="card-body p-5" style="background-color: white">
+                    @if (ViewData["ErrorMessage"] != null)
+                    {
+                        <div class="alert alert-danger">
+                            @ViewData["ErrorMessage"]
+                        </div>
+                    }
+
+                    @if (ViewData["SuccessMessage"] != null)
+                    {
+                        <div class="alert alert-success">
+                            @ViewData["SuccessMessage"]
+                        </div>
+                    }
+
+                    <form method="post">
+                        <div class="mb-3" >
+                            <b><label for="CurrentPassword" class="form-label">Mật khẩu hiện tại</label></b>
+                            <input type="password" id="CurrentPassword" name="CurrentPassword" class="form-control" />
+                        </div>
+                        <div class="mb-3">
+                            </b>
+                            <b><label for="NewPassword" class="form-label">Mật khẩu mới</label></b>
+                            <input type="password" id="NewPassword" name="NewPassword" class="form-control" />
+                        </div>
+                        <div class="mb-3">
+                            <b><label for="ConfirmNewPassword" class="form-label">Xác nhận mật khẩu mới</label></b>
+                            <input type="password" id="ConfirmNewPassword" name="ConfirmNewPassword" class="form-control" />
+                        </div>
+                        <button type="submit" class="btn btn-dark w-100">Đổi Mật Khẩu</button>
+
+                        <a asp-page="/SanPhams" class="text-decoration-none text-dark text-center">Quay lại</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
